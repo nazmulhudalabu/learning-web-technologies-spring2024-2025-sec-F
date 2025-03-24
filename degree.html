@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Validation</title>
+    <script>
+        function validateCheckbox() {
+            let checkboxes = document.querySelectorAll("input[name='degree']:checked");
+            if (checkboxes.length === 0) {
+                alert("At least one degree must be selected.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateCheckbox()">
+        <label>Degree:</label><br>
+        <input type="checkbox" name="degree" value="SSC"> SSC<br>
+        <input type="checkbox" name="degree" value="HSC"> HSC <br>
+        <input type="checkbox" name="degree" value="BSc"> BSc<br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
